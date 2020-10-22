@@ -153,7 +153,7 @@ ul.show {
   }
 }
 
-@media screen and (max-width: 978px) {
+@media screen and (max-width: 980px) {
   .menu {
     height: 65px;
   }
@@ -238,6 +238,82 @@ ul.show {
   .header2 .logo {
     line-height: 100px;
     font-size: 22px;
+  }
+}
+@media screen and (max-height: 449px) and (orientation: landscape) {
+  .menu {
+    height: 65px;
+  }
+  .btn_menu {
+    display: inline-flex;
+  }
+  .btn_menu span {
+    font-size: 13px;
+    margin-left: 5px;
+    text-align: center;
+  }
+  .menu_items {
+    position: fixed;
+    width: 100vw;
+    height: calc(100% - 65px);
+    background: #272727;
+    top: -100vh;
+    transition: all, 0.7s;
+    flex-direction: column;
+  }
+  .responsivemenu {
+    display: inline-block;
+    margin-top: 0.5px;
+  }
+  .responsivemenu li {
+    display: block;
+  }
+
+  .responsivemenu li a {
+    display: block;
+    font-size: 13px;
+    line-height: normal;
+    padding: 7px 13px;
+  }
+  .nose {
+    color: #fff;
+    float: right;
+    float: top;
+    margin-right: 5px;
+  }
+  .responsivemenu span h1 {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .submenu {
+    display: none;
+  }
+  .menu_items ul li {
+    margin: 30px 0 0 0;
+    line-height: 30px;
+  }
+  .menu_items li:hover {
+    background: none;
+  }
+
+  .menu_items li a {
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+  }
+  .menu_items li a:hover {
+    color: #00c6ee;
+  }
+  .logo {
+    font-size: 20px;
+    padding-left: 35px;
+    line-height: 40px;
+  }
+  .btn_menu:hover {
+    color: #66ffff;
   }
 }
 
