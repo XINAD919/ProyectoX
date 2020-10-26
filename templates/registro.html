@@ -26,19 +26,20 @@
         </a>
       </span>
     </div>
+
     <div>
-      <h1>Iniciar Sesion</h1>
-      <form action="/iniciarSesion" method="POST">
+      <h1>Registrarse</h1>
+      <form action="/registrarUsuario" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" />
         <input type="email" name="correo" placeholder="Tucorreo@email.com" />
         <input type="password" name="contraseña" placeholder="contraseña" />
-        <button type="submit">Iniciar sesion</button>
+        <button type="submit">Registrarse</button>
       </form>
-      <a href="{{  url_for('registro') }}"> <i>No tengo cuenta</i></a>
     </div>
-    <!-- mensaje de error al logearse-->
-    {% with errors = get_flashed_messages(category_filter=['error']) %} {% if
-    errors %} {% for error in errors %}
-    <p>{{ error }}</p>
+    <!-- mensaje de success al logearse -->
+    {% with success = get_flashed_messages(category_filter=['success']) %} {% if
+    success %} {% for msg in success %}
+    <p>{{ msg }}</p>
     {% endfor %} {% endif %} {% endwith %}
     <!-- -------------------------------------------------- -->
 

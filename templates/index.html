@@ -1,12 +1,13 @@
 {% extends "layout.html"%} {% block content %}
 
 <h1>hola este es proyecto X</h1>
-<!-- esto es para el mensaje de registro exitoso -->
-{% with messages = get_flashed_messages() %} {% if messages %} {% for message in
-messages %}
-<p>{{ message }}</p>
-{% endfor %} {% endif %} {% endwith %}
-<!-- fin de line del mensaje -->
+
+<!-- mensaje de success al logearse -->
+<!-- {% with success = get_flashed_messages(category_filter=['success']) %} {% if
+success %} {% for msg in success %}
+<p>{{ msg }}</p>
+{% endfor %} {% endif %} {% endwith %} -->
+<!-- -------------------------------------------------- -->
 <section class="contenido">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aperiam
   voluptatem explicabo itaque quos libero praesentium repellendus, dolore
